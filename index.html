@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Painel Adminstrativo YourTime</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <link href="css/sb-admin.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer bg-dark" id="page-top">
+  <!-- Navigation-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" id="mainNav">
+    <a class="navbar-brand" href="index.html">Your Time</a>
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav navbar-sidenav" id="exampleAccordion">
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Dashboard">
+          <a class="nav-link" href="index.html">
+            <i class="fa fa-fw fa-dashboard"></i>
+            <span class="nav-link-text">Inicio</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Charts">
+          <a class="nav-link" href="Cadastrar_Negocio.html">
+            <i class="fa fa-fw fa-area-chart"></i>
+            <span class="nav-link-text">Cadastrar Negócio</span>
+          </a>
+        </li>
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Tables">
+          <a class="nav-link" href="Consultar_Agendamentos.html">
+            <i class="fa fa-fw fa-table"></i>
+            <span class="nav-link-text">Consultar Agendamento</span>
+          </a>
+        </li>
+
+        <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Link">
+          <a class="nav-link" href="#">
+            <i class="fa fa-fw fa-link"></i>
+            <span class="nav-link-text">Emitir Relatorio</span>
+          </a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">
+            <i class="fa fa-fw fa-sign-out"></i>Sair</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="content-wrapper" style="min-height: 800px;">
+    <section class="content-header">
+        <h1>
+            Eventos
+            <small>Gerenciar Eventos</small>
+        </h1>
+    </section>
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="box">
+                    <div class="box-body">
+                        <a href="/admin/evento/create" class="btn bg-olive btn-flat">Adicionar evento</a>
+                        <a href="/blog" target="_blank" class="btn btn-default btn-flat">Visualizar no site</a>
+                    </div>
+                    <div class="box-body">
+                        <div id="list_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"><div class="row"><div class="col-sm-6"><div class="dataTables_length" id="list_length"><label>Mostrar <select name="list_length" aria-controls="list" class="form-control input-sm"><option value="15">15</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entradas</label></div></div><div class="col-sm-6"><div id="list_filter" class="dataTables_filter no-print"><label>Pesquisar:<input type="search" class="form-control input-sm" placeholder="" aria-controls="list"></label></div></div></div><div class="row"><div class="col-sm-12"><table id="list" class="table table-bordered table-striped dataTable no-footer" role="grid" aria-describedby="list_info">
+                            <thead>
+                                <tr role="row"><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 8px;">#</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 646px;">Título</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 54px;">Data Início</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 40px;">Status</th><th class="sorting_disabled" rowspan="1" colspan="1" style="width: 125px;">Ações</th></tr>
+                            </thead>
+                            <tbody>             
+                            <tr role="row" class="odd">
+                                            <td>1</td>
+                                            <td>Semana Acadêmica Interdisciplinar com Robinson Shiba</td>
+                                            <td>18/05/2018</td>
+                                            <td>
+                                                    <span class="label label-danger">Inativo</span>
+                                            </td>
+                                            <td style="display: inline-flex;">
+                                                <a href="/admin/evento/edit/46" class="btn btn-flat btn-warning btn-sm" style="margin-right: 5px;"><i class="fa fa-pencil"></i> Editar</a>
+                                                <a href="/admin/evento/delete/46" onclick="return confirm('Deseja realmente excluir?');" class="btn btn-flat btn-danger btn-sm"><i class="fa fa-trash-o"></i> Remover</a>
+                                            </td>
+                                        </tr><tr role="row" class="even">
+                                            <td>13</td>
+                                            <td>Symposium</td>
+                                            <td>06/09/2017</td>
+                                            <td>
+                                                    <span class="label label-danger">Inativo</span>
+                                            </td>
+                                            <td style="display: inline-flex;">
+                                                <a href="/admin/evento/edit/29" class="btn btn-flat btn-warning btn-sm" style="margin-right: 5px;"><i class="fa fa-pencil"></i> Editar</a>
+                                                <a href="/admin/evento/delete/29" onclick="return confirm('Deseja realmente excluir?');" class="btn btn-flat btn-danger btn-sm"><i class="fa fa-trash-o"></i> Remover</a>
+                                            </td>
+                                        </tr><tr role="row" class="even">
+                                            <td>14</td>
+                                            <td>II Encontro de Professores</td>
+                                            <td>30/09/2017</td>
+                                            <td>
+                                                    <span class="label label-danger">Inativo</span>
+                                            </td>
+                                            <td style="display: inline-flex;">
+                                                <a href="/admin/evento/edit/28" class="btn btn-flat btn-warning btn-sm" style="margin-right: 5px;"><i class="fa fa-pencil"></i> Editar</a>
+                                                <a href="/admin/evento/delete/28" onclick="return confirm('Deseja realmente excluir?');" class="btn btn-flat btn-danger btn-sm"><i class="fa fa-trash-o"></i> Remover</a>
+                                            </td>
+                                        </tr><tr role="row" class="odd">
+                                            <td>15</td>
+                                            <td>Aula Magna AMF 2017.2 | com Sr. José Eugênio Farina (Todeschini)</td>
+                                            <td>31/07/2017</td>
+                                            <td>
+                                                    <span class="label label-danger">Inativo</span>
+                                            </td>
+                                            <td style="display: inline-flex;">
+                                                <a href="/admin/evento/edit/27" class="btn btn-flat btn-warning btn-sm" style="margin-right: 5px;"><i class="fa fa-pencil"></i> Editar</a>
+                                                <a href="/admin/evento/delete/27" onclick="return confirm('Deseja realmente excluir?');" class="btn btn-flat btn-danger btn-sm"><i class="fa fa-trash-o"></i> Remover</a>
+                                            </td>
+                                        </tr></tbody>
+                        </table></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  </div>
+
+    <footer class="sticky-footer">
+      <div class="container">
+        <div class="text-center">
+          <small>Copyright © YourTime 2018</small>
+        </div>
+      </div>
+    </footer>
+   
+</body>
+
+</html>
