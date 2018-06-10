@@ -57,10 +57,28 @@
                 	<input class="form-control" id="nome" maxlenght="255" name="nome" type="text" placeholder="Digite o nome do Estabelecimento">
                 </table>
 			</div>
-			<div class="col-md-12 col-xs-12">
+			<div class="col-md-6 col-xs-12">
 				<table class="table">
-				    <label for="Endereço">Endereço *</label>
-	                <input class="form-control" id="endereço" maxlenght="255" name=endereço" type="text" placeholder="Digite nome da rua seguido do número do estabelecimento">
+				    <label for="Cidade">Estado *</label>
+	                <input class="form-control" id="estado" maxlenght="255" name="estado" type="text" placeholder="Digite o estado onde esta localizado o seu estabelecimento">
+                </table>
+            </div>
+            <div class="col-md-6 col-xs-12">
+				<table class="table">
+				    <label for="Cidade">Cidade *</label>
+	                <input class="form-control" id="cidade" maxlenght="255" name="cidade" type="text" placeholder="Digite a cidade onde esta localizado o seu estabelecimento">
+                </table>
+            </div>
+            <div class="col-md-10 col-xs-12">
+				<table class="table">
+				    <label for="Rua">Rua *</label>
+	                <input class="form-control" id="Rua" maxlenght="255" name="rua" type="text" placeholder="Digite a rua onde esta localizado o seu estabelecimento">
+                </table>
+            </div>
+   			<div class="col-md-2 col-xs-12">
+				<table class="table">
+				    <label for="Endereço">Número *</label>
+	                <input class="form-control" id="numero" maxlenght="255" name="numero" type="number" placeholder="Nº do estabelecimento">
                 </table>
             </div>
             <div class="col-md-12 col-xs-12">
@@ -151,10 +169,8 @@
 				</table>
 			</div>
             <div class="col-md-5 col-xs-12">
-				<table class="table">
-				    <button type="button" class="btn btn-warning btn-md" id="salvar">Salvar</button>
-				    <button type="button" class="btn btn-danger btn-md" id="cancelar">Cancelar</button> 
-				</table>
+				<button type="button" class="btn btn-warning btn-md" id="salvar">Salvar</button>
+				<button type="button" class="btn btn-danger btn-md" id="cancelar">Cancelar</button> 
 			</div>
 		</div>
 	</div>
