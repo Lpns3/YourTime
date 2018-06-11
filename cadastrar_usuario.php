@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-br">
 	<head>
@@ -9,7 +8,7 @@
 		<meta name="author" content="YourTime">
 		<link rel="icon" href="imagens/favicon.ico">
 
-		<title>Administrativo</title>
+		<title>Cadastra Usuário</title>
 		<link href="css/bootstrap.css" rel="stylesheet">
 		<link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 		<link href="css/theme.css" rel="stylesheet">
@@ -28,67 +27,46 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="administrativo.php">YourTime</a>
+				<a class="navbar-brand" href="cadastrar_usuario.php">YourTime</a>
 			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<ul class="nav navbar-nav">
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Estabelecimentos<span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="cadastrar.php">Cadastrar</a></li>
-							<li><a href="consultar.php">Consultar</a></li>
-						</ul>
-					</li>
-					<li><a href="agenda.php">Agenda</a></li>
-					<li><a href="#">Emitir Relatório</a></li>
-				</ul>
-			</div><!--/.nav-collapse -->
 		</div>
     </nav>
 	
 	<div class="container theme-showcase" role="main">
 		<div class="page-header">
-			<h1>Estabelecimentos</h1>
-			<div class="dropdown">
-				<a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Selecione o estabelecimento<span class="caret"></span></a>
-				<ul class="dropdown-menu">
-					<li><a href="#">Socer 10</a></li>
-					<li><a href="#">Bola na Rede</a></li>
-				</ul>
-			</div>
+			<h1>Cadastrar Usuário</h1>
 		</div>
-
-		<div class="row">
-			<div class="col-md-12">
+		<div class="row">			
+            <div class="col-md-12 col-xs-12">
+             	<table class="table">
+               		<label for="Nome">Nome *</label>
+                	<input class="form-control" id="nome_usuario" maxlenght="255" name="nome_usuario" type="text" placeholder="Digite seu nome">
+                </table>
+			</div>
+			<div class="col-md-12 col-xs-12">
 				<table class="table">
-					<thead>
-						<tr>
-							<th>#</th>
-							<th>Nome</th>
-							<th>Cidade</th>
-							<th>Rua</th>
-							<th>Número</th>
-							<th>Telefone</th>
-							<th>Status</th>
-							<th>Ações</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>1</td>
-							<td>Soccer 10</td>
-							<td>Cachoeira do Sul</td>
-							<td>Ramiro Barcelos</td>
-							<td>666</td>
-							<td>51 3722-4872</td>
-							<td>Ativo</td>
-							<td>
-								<button type="button" class="btn btn-xs btn-warning">Editar</button>
-								<button type="button" class="btn btn-xs btn-danger">Apagar</button>
-							</td>
-						</tr>              
-					</tbody>
-				</table>
+				    <label for="Cidade">E-mail *</label>
+	                <input class="form-control" id="email_usuario" maxlenght="255" name="email_usuario" type="text" placeholder="Digite seu E-mail">
+                </table>
+            </div>
+            <div class="col-md-12 col-xs-12">
+				<table class="table">
+				    <label for="Telefone">Senha *</label>
+	                <input class="form-control" id="senha_usuario" maxlenght="255" name="senha_usuario" type="text" placeholder="Castrar senha">
+                </table>
+            </div>
+            <div class="col-md-12 col-xs-12">
+				<table class="table">
+				    <label for="Status">Escolha o perfil *</label><br>
+	                <form>
+						<input type="radio" name="status" value="ativado"> Administrador<br>
+						<input type="radio" name="status" value="desativado"> Usuário
+					</form>
+                </table>
+            </div>
+            <div class="col-md-5 col-xs-12">
+				<button type="button" class="btn btn-warning btn-md" id="salvar">Salvar</button>
+				<button type="button" class="btn btn-danger btn-md" id="cancelar">Cancelar</button> 
 			</div>
 		</div>
 	</div>
